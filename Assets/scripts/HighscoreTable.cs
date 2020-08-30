@@ -68,6 +68,7 @@ public class HighscoreTable : MonoBehaviour
 		}
 		entryTemplate.gameObject.SetActive(false);
 
+		Highscores.Load();
 		if (Highscores.Get(0).time == 0) 
 		{
 			// There's no stored table, initialize
@@ -231,7 +232,7 @@ public class HighscoreTable : MonoBehaviour
 		}
 
 		//public static void Load() 
-		public void Load() 
+		public static void Load() 
 		{
 			string scene = SceneManager.GetActiveScene().name;
 
